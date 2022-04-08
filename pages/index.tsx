@@ -8,7 +8,8 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useState } from 'react';
-import Link from '../src/Link';
+import Link from '../src/components/Link';
+import DashboardLayout from '../src/components/DashboardLayout';
 
 type TabPanelProps = {
   children: React.ReactNode;
@@ -51,28 +52,12 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 5,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
-        <Typography component="h1" color="primary">
-          Material UI v5 with Next.js in TypeScript
-        </Typography>
-        <Typography component="h2" color="secondary">
-          Boilerplate for building faster.
-        </Typography>
-      </Box>
+    <Container disableGutters maxWidth="xl">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="Navigation Tabs"
         >
           <Tab label="Item One" {...a11yProps(0)} />
           <Tab label="Item Two" {...a11yProps(1)} />

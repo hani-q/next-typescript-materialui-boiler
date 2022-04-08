@@ -1,4 +1,4 @@
-import Link from '../src/Link';
+import Link from '../src/components/Link';
 
 const About = () => {
   return (
